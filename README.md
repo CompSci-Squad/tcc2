@@ -6,7 +6,7 @@ Notebook de pré-processamento do dataset **FRED-MD** (McCracken & Ng, 2016) par
 
 | Arquivo | Descrição |
 |---|---|
-| `fred_md_stationarity.ipynb` | Notebook principal: leitura, transformação e z-score |
+| `fred_md_data_preparation.ipynb` | Notebook principal: leitura, transformação, z-score, PCA, KMO/Bartlett e clustering (KMeans) |
 
 > Os arquivos CSV (`current.csv`, `fred_md_transformed.csv`) **não estão versionados**. Obtenha `current.csv` diretamente no [FRED-MD](https://research.stlouisfed.org/econ/mccracken/fred-databases/).
 
@@ -26,10 +26,13 @@ Seguindo o **Appendix A** de McCracken & Ng (2016):
 
 ## Como rodar
 
-### Pré-requisitos
+### Ambiente
 
 ```bash
-pip install pandas numpy jupyter
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python -m ipykernel install --user --name=tcc2 --display-name "Python (tcc2)"
 ```
 
 ### Passos
@@ -37,10 +40,10 @@ pip install pandas numpy jupyter
 1. Baixe `current.csv` do FRED-MD e coloque na raiz do projeto.
 2. Abra o notebook:
    ```bash
-   jupyter notebook fred_md_stationarity.ipynb
+   jupyter lab fred_md_data_preparation.ipynb
    ```
-3. Execute todas as células em ordem (`Run All`).
-4. O arquivo `fred_md_transformed.csv` será gerado na mesma pasta.
+3. Selecione o kernel **Python (tcc2)**.
+4. Execute todas as células em ordem (`Run All`).
 
 ## Referência
 

@@ -1,20 +1,7 @@
-# Dados
-*.csv
+# Ignora tudo por padrão — só o notebook, requirements e README ficam versionados.
+*
 
-# Jupyter
-.ipynb_checkpoints/
-*.ipynb_checkpoints
-
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-.env
-.venv/
-env/
-venv/
-
-# OS
-.DS_Store
-Thumbs.db
+!/fred_md_data_preparation.ipynb
+!/requirements.txt
+!/README.md
+!/.gitignore
