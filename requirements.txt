@@ -8,3 +8,4 @@ seaborn
 factor_analyzer
 jupyterlab
 ipykernel
+networkx

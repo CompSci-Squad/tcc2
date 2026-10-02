@@ -1,7 +1,31 @@
-# Ignora tudo por padrão — só o notebook, requirements e README ficam versionados.
-*
+# ambiente
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
 
-!/fred_md_data_preparation.ipynb
-!/requirements.txt
-!/README.md
-!/.gitignore
+# config local do Claude Code (permissões e hooks com caminho absoluto)
+**/.claude/settings.local.json
+**/.claude/agent-memory/
+
+# compilação LaTeX
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# zips antigos da submissão
+*.zip
+
+*.md
+artigos/
+docs/
+.mcp.json
+
+# derivado grande, o notebook gera de novo
+resultados/tabelas/fred_md_standardized.csv
